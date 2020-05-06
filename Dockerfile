@@ -12,8 +12,5 @@ ADD https://raw.githubusercontent.com/mlocati/docker-php-extension-installer/mas
 RUN chmod +x /usr/local/bin/install-php-extensions && \
     install-php-extensions zip xdebug pgsql
 
-# Install dependencies
-COPY composer.json composer.lock /usr/src/app
-RUN composer install
-
 COPY ./ ./
+
